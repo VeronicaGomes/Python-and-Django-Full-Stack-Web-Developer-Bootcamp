@@ -1,0 +1,40 @@
+h1{
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+}
+
+
+table{
+  margin: auto;
+  border-spacing: 15px;
+}
+
+td{
+  border-style: solid;
+  border-top-width: 200px;
+  border-right-width: 100px;
+  border-bottom-width: 200px;
+  border-left-width: 100px;
+  padding: 0px;
+
+}
+
+#one{
+  border-color: #CFFFB3;
+}
+
+#two{
+  border-color: #ADE25D;
+}
+
+#three{
+  border-color: #FCEC52;
+}
+
+#four{
+  border-color: #3B7080;
+}
+
+#five{
+  border-color: #3A5743;
+}
