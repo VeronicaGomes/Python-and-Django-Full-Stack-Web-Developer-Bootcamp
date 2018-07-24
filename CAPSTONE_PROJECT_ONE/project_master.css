@@ -1,0 +1,36 @@
+body{
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+  text-align: center;
+
+  background-color: navy;
+  margin: 0px;
+  padding-right: 20%;
+  padding-left: 20%;
+  border: 60px solid aqua;
+  border-top-width: 0px;
+}
+
+
+h2{
+  margin: 40px;
+}
+
+p{
+  margin-top: 80px;
+}
+
+.user_input{
+  width: 250px;
+  height: 30px;
+}
+
+#submit{
+  font-size: 1.5em;
+  width: 150px;
+  height: 80px;
+  background-color: orange;
+  border: 1px solid white;
+  border-radius: 20px;
+  margin: 10px;
+}
