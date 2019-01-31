@@ -1,16 +1,9 @@
-<<<<<<< HEAD
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from django.urls import reverse_lazy
 from blog.models import Post, Comment
 from blog.form import PostForm, CommentForm
 from django.contrib.auth.decorators import login_required
-=======
-from django.shortcuts import render
-from django.urls import reverse_lazy
-from blog.models import Post, Comment
-from blog.form import PostForm, CommentForm
->>>>>>> 834b733aad511483282a4e7ff01d071c1d1beed2
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import (TemplateView, ListView,
                                   DetailView, CreateView,
@@ -45,10 +38,6 @@ class PostUpdateView(LoginRequiredMixin, UpdateView):
 
     model = Post
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 834b733aad511483282a4e7ff01d071c1d1beed2
 class PostDeleteView(LoginRequiredMixin, DeleteView):
     model = Post
 
@@ -62,7 +51,6 @@ class DraftListView(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         return Post.objects.filter(publish_date__isnull=True).order_by('created_date')
-<<<<<<< HEAD
 
 
 @login_required
@@ -98,5 +86,3 @@ def post_published(request,pk):
     comment = get_object_or_404(Comment, pk=pk)
     post.publish()
     return redirect('post_detail', pk=post.pk)
-=======
->>>>>>> 834b733aad511483282a4e7ff01d071c1d1beed2
