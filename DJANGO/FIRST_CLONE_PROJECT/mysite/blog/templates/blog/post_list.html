@@ -10,10 +10,7 @@
         <p>Published on: {{post.published|date:"D M Y"}}</p>
       </div>
       <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approve_comments.count }}</a>
-<<<<<<< HEAD
     {% endfor %}
-=======
->>>>>>> 0e757c70156e2ba4f7c9b5dcef82e86293138707
   </div>
 
 {% endblock %}
