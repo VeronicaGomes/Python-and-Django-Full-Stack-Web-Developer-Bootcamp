@@ -20,6 +20,27 @@
 
 }
 
+.postdate{
+  text-align: center;
+}
+
+.postitle{
+  font-family: 'Roboto Mono', monospace;
+  font-size: 3em;
+  text-align: center;
+}
+
+.postcontent{
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.5em;
+}
+
+.btn-comment{
+  position: absolute;
+  right: 0px;
+}
+
+/* COLOR CHANGER */
 @keyframes spinify {
   0% {
     transform: translate(0px,0px);
