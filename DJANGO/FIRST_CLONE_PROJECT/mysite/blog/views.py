@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from django.urls import reverse_lazy
 from blog.models import Post, Comment
-from blog.form import PostForm, CommentForm
+from blog.forms import PostForm, CommentForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import (TemplateView, ListView,
@@ -75,14 +75,14 @@ def comment_approve(request,pk):
     return redirect('post_detail', pk=comment.post.pk)
 
 @login_required
-def comment_approve(request,pk):
+def comment_remove(request,pk):
     comment = get_object_or_404(Comment, pk=pk)
     post_pk = comment.post.pk
     comment.delete()
     return redirect('post_detail', pk=post_pk)
 
 @login_required
-def post_published(request,pk):
+def post_publish(request,pk):
     comment = get_object_or_404(Comment, pk=pk)
     post.publish()
     return redirect('post_detail', pk=post.pk)
