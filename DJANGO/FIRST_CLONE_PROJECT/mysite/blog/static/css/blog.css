@@ -1,11 +1,10 @@
 .techfont{
   font-family: 'Roboto Mono', monospace;
-  font-size: 1.5em;
-  margin-bottom: 10px;
+  font-size: 1em;
 }
 
 .bigbrand{
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .centerstage{
@@ -20,25 +19,43 @@
 
 }
 
-.postdate{
-  text-align: center;
+.date{
+  font-size: 0.7em;
+}
+
+.number-of-comments{
+  font-size: 0.7em;
+  color: black;
+}
+
+.comment-author{
+  font-size: 1.5em;
 }
 
 .postitle{
   font-family: 'Roboto Mono', monospace;
-  font-size: 3em;
-  text-align: center;
 }
 
 .postcontent{
   font-family: 'Comfortaa', cursive;
-  font-size: 1.5em;
+}
+
+.text{
+  font-family: 'Comfortaa', cursive;
+  color: blue;
 }
 
 .btn-comment{
   position: absolute;
   right: 0px;
 }
+
+.title{
+  color: black;
+}
+
+/* Hoover */
+
 
 /* COLOR CHANGER */
 @keyframes spinify {
