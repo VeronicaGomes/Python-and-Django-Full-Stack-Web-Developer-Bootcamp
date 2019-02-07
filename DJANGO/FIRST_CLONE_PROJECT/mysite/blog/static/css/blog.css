@@ -40,6 +40,10 @@
   font-family: 'Comfortaa', cursive;
 }
 
+.post{
+  width: 50%;
+}
+
 .text{
   font-family: 'Comfortaa', cursive;
   color: blue;
