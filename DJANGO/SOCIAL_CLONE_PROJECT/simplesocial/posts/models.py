@@ -19,7 +19,7 @@ class Post(models.Model):
 
 
     class Meta:
-        ordering = [-created_at]
+        ordering = ["-created_at"]
         unique_together = ['user', 'message']
 
     def __str__(self):
