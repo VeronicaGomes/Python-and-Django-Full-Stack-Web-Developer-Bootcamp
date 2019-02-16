@@ -20,7 +20,7 @@ class PostList(SelectRelatedMixin, ListView):
 
 class UserPosts(ListView):
     model = models.Post
-    template_name = 'post/user_post_list.html'
+    template_name = 'posts/user_post_list.html'
 
     def get_queryset(self):
         try:
