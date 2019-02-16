@@ -56,7 +56,7 @@ class CreatePost(LoginRequiredMixin, SelectRelatedMixin, CreateView):
         return super().form_valid(form)
 
 class DeletePost(LoginRequiredMixin, SelectRelatedMixin, DeleteView):
-    model = Post
+    model = models.Post
     select_related = ("user", "group")
     success_url = reverse_lazy("posts:all")
 
