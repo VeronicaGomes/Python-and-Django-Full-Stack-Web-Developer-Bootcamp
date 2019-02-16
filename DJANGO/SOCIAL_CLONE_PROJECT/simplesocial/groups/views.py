@@ -34,9 +34,24 @@ class JoinGroup(LoginRequiredMixin, RedirectView):
         except IntegrityError:
             messages.warning(self.request=,('Already a member!'))
         else:
-            messages.warning(self.request=,('You are now a member of this group'))
+            messages.success(self.request=,('You are now a member of this group'))
 
         return super().get(request, *args, **kwargs)
 
-class LeaveGroup(LoginRequiredMixin):
-    pass
+class LeaveGroup(LoginRequiredMixin, RedirectView):
+    def get_redirect_url(self, *args, **kwargs):
+        return reverse('groups:single', kwargs={'slug':self.kwargs.get('slug')})
+
+    def get(self, request, *args, **kwargs):
+        try:
+            membership = GroupMember.objects.filter(
+                user=self.request.user,
+                group__slug=self.kwargs.get('slug')
+            ).get()
+        except GroupMember.DoesNotExist:
+            messages.warning(self.request=,('You are not in this group!'))
+        else:
+            membership.delete()
+            messages.success(self.request=,('You have left this group!'))
+
+        return super().get(request, *args, **kwargs)
