@@ -9,12 +9,12 @@
       </span>
 
       <time class="time">
-        <a href="{% url 'postS:single' username=post.user.username pk=post.pk %}"></a>
+        <a href="{% url 'posts:single' username=post.user.username pk=post.pk %}"></a>
       </time>
     </h5>
     <div class="media-footer">
       {% if user.is_authenticated and post.user == user  %}
-        <a href="{% url 'post:delete' pk=post.pk %}" title="Delete"
+        <a href="{% url 'posts:delete' pk=post.pk %}" title="Delete"
           class="btn btn-simple">
             <span class="glyphicon glyphicon-remove text-danger"
               aria-hidden="true"></span>
